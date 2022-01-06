@@ -34,9 +34,9 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/linuxtweetapp1:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/linuxtweetapp1:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/linuxtweetapp1:buildcache,mode=max
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/LinuxTweetApp1:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/LinuxTweetApp1:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/LinuxTweetApp1:buildcache,mode=max
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
